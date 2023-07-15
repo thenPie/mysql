@@ -1,4 +1,4 @@
-SELECT dater(seconds) AS 'DD:HH:SS' FROM date_it;
+SELECT dater(seconds) AS 'DD:HH:MM' FROM date_it;
 
 CREATE DEFINER=`root`@`localhost` FUNCTION `dater`(seconds INT) RETURNS char(50) CHARSET utf8mb4
     DETERMINISTIC
