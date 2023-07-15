@@ -11,3 +11,26 @@ BEGIN
   SET res = CONCAT(days, ':', hm);
   RETURN (res);
 END
+
+-- line line line line line line line line line line line line line line line line line line line line line line line line line line line line line line line line line line line line line line line
+    
+CALL dwos(35);
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `dwos`(amountoftatas INT)
+BEGIN
+  CREATE TEMPORARY TABLE taleb (
+  `tit` INT NOT NULL,
+  PRIMARY KEY (`tit`));
+
+  SET @toot = 2;
+    
+  loopie:
+  WHILE @toot <= amountoftatas DO
+      INSERT INTO `taleb` (`tit`) VALUES (@toot);
+      SET @toot = @toot + 2;
+  END WHILE loopie;
+    
+  SELECT * FROM taleb;
+  DROP TABLE taleb;
+    
+END
